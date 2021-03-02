@@ -9,8 +9,9 @@ const htmlPlugin = new HtmlWebpackPlugin({
 module.exports = {
   entry: "./src",
   output: {
-    path: path.resolve(__dirname, "public"),
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -19,7 +20,15 @@ module.exports = {
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
+      {
+        test: /\.json$/,
+        loader: 'json-loader',
+        type: 'javascript/auto'
+    },
     ],
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   resolve: {
     extensions: ["*", ".js", ".jsx"],
