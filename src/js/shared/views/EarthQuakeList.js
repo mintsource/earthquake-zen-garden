@@ -351,7 +351,7 @@ export default function EarthQuakeList(props) {
                 "gap": null,
                 "magType": "ml",
                 "type": "earthquake",
-          s      "title": "M 1.6 - 133km WSW of Ruby, Alaska"
+                "title": "M 1.6 - 133km WSW of Ruby, Alaska"
             },
             "geometry": {
                 "type": "Point",

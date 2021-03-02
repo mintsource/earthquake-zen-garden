@@ -18,7 +18,7 @@ const earthQuakeData = {
   },
   "profile": {
     "firstName": "Sally",
-    "lastName":s "Wang",
+    "lastName": "Wang",
     "avatarImage": "https://upload.wikimedia.org/wikipedia/commons/5/59/That_Poppy_profile_picture.jpg",
     "phone": "01-343-989-2345",
     "email": "sw@nowhere.ic.kp",
