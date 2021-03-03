@@ -9,14 +9,14 @@ export default function EarthQuakeDetail() {
 
   return (
     <article className='detail-container'>
-      <h1>{details.properties.title}</h1>
+      <h1>{details.properties.place}</h1>
       <section>
         <div className='row'>
           <div className='category'>
             Title
             </div>
           <div className='details'>
-            {details.properties.title}
+            {details.properties.place}
           </div>
         </div>
         <div className='row'>
