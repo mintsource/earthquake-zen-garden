@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+import earthQuakeData from '../../../data/earthquakes.json'
 
-export default function EarthQuakeList(props) {
-    const listItems = props.earthquakes.map((earthquake) => {
-        console.log(JSON.stringify(earthquake))
+export default function EarthQuakeList() {
+    const listItems = earthQuakeData.data.features.map((earthquake) => {
         return (
             <li key={earthquake.id}>
-                <Link to={"/detail?id=" + earthquake.id}>
+                <Link to={`/detail/${earthquake.id}`}>
                     {earthquake.properties.place}</Link>
             </li>
         )
