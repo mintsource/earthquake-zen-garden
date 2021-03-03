@@ -5,7 +5,7 @@ import earthQuakeData from '../../data/earthquakes.json'
 
 export default function EarthQuakeDetail() {
   const { id } = useParams()
-  const details = earthQuakeData.data.features.find(earthquake => earthquake.id = id)
+  const details = earthQuakeData.data.features.find(earthquake => earthquake.id === id)
 
   return (
     <article className='detail-container'>
