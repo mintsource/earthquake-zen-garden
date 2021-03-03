@@ -1,10 +1,33 @@
-/*
-make these css variables... 
-Color palette:
-#ededed
-#777777
-#444444
-#0011bb
-#6600cc
-Font family: sans-serif
-*/ 
+:root {
+  --pallette-theme-standout-main: #0011bb;
+  --pallette-theme-standout-secondary: #6600cc;
+  --pallette-lightist-tone:#ededed;
+  --pallette-darkish-tone:#777777;
+  --pallette-darker-tone: #444444;
+  --pallette-darkest-tone: #000000;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.entry {
+  padding: 1rem;
+}
+
+.entry.title{
+  background-color: var(--pallette-darkish-tone);
+  color: var(--pallette-lightist-tone);
+  font-weight: bold;
+  width: 10%;
+}
+
+.entry.value{
+  width: 50%;
+  background-color: #ededed;
+}

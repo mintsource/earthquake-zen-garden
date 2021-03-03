@@ -3,11 +3,10 @@ import {
   BrowserRouter as Router, Route, Switch
 } from "react-router-dom"
 import Header from './js/shared/Header'
-import Footer from './js/shared/Footer'
 import EarthQuakeList from './js/views/EarthQuakeList'
 import EarthQuakeDetail from './js/views/EarthQuakeDetail'
 import Profile from './js/views/Profile'
-//import './App.css'
+import './App.css'
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-      <Footer />
     </div>
   );
 }
