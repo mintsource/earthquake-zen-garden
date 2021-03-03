@@ -6,7 +6,6 @@ export default function Profile() {
 
     const { id } = useParams()
     const profile = earthQuakeData.profile
-    console.log('profile:' + JSON.stringify(profile))
 
     const fields = [
         { label: "First Name", value: "firstName" },
@@ -19,7 +18,6 @@ export default function Profile() {
     const profileTemplate = []
 
     fields.map(field => {
-        console.log(JSON.stringify(field))
         profileTemplate.push(
             <div className='row' key={field.value}>
                 <div className='entry title'>

@@ -1,14 +1,36 @@
 :root {
   --pallette-theme-standout-main: #0011bb;
   --pallette-theme-standout-secondary: #6600cc;
-  --pallette-lightist-tone:#ededed;
-  --pallette-darkish-tone:#777777;
+  --pallette-lightist-tone: #ededed;
+  --pallette-darkier-tone: #777777;
   --pallette-darker-tone: #444444;
   --pallette-darkest-tone: #000000;
 }
 
 body {
   font-family: sans-serif;
+}
+
+header {
+  background-color: var(--pallette-lightist-tone);
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+}
+
+header .logo img {
+  width: 20%;
+}
+
+header .title {
+  color: var(---pallette-darkier-tone);
+  font-size: 2rem;
+  font-weight: bold;
+  width: 60%;
+}
+
+h1 {
+  text-align: center;
 }
 
 .row {
@@ -20,14 +42,14 @@ body {
   padding: 1rem;
 }
 
-.entry.title{
-  background-color: var(--pallette-darkish-tone);
+.entry.title {
+  background-color: var(--pallette-darkier-tone);
   color: var(--pallette-lightist-tone);
   font-weight: bold;
   width: 10%;
 }
 
-.entry.value{
+.entry.value {
   width: 50%;
   background-color: #ededed;
 }
