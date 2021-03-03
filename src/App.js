@@ -4,8 +4,9 @@ import {
 } from "react-router-dom"
 import Header from './js/shared/Header'
 import Footer from './js/shared/Footer'
-import EarthQuakeList from './js/shared/views/EarthQuakeList'
-import EarthQuakeDetail from './js/shared/views/EarthQuakeDetail'
+import EarthQuakeList from './js/views/EarthQuakeList'
+import EarthQuakeDetail from './js/views/EarthQuakeDetail'
+import Profile from './js/views/Profile'
 //import './App.css'
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/detail/:id">
             <EarthQuakeDetail />
+          </Route>
+          <Route path="/profile/:id">
+            <Profile />
           </Route>
         </Switch>
       </Router>

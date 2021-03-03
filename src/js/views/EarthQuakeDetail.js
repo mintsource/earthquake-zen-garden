@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
-import earthQuakeData from '../../../data/earthquakes.json'
+import earthQuakeData from '../../data/earthquakes.json'
 
 
 export default function EarthQuakeDetail() {
@@ -10,7 +10,7 @@ export default function EarthQuakeDetail() {
   return (
     <article className='detail-container'>
       <h1>{details.properties.title}</h1>
-      <div >
+      <section>
         <div className='row'>
           <div className='category'>
             Title
@@ -18,30 +18,40 @@ export default function EarthQuakeDetail() {
           <div className='details'>
             {details.properties.title}
           </div>
+        </div>
+        <div className='row'>
           <div className='category'>
             Magnititude
             </div>
           <div className='details'>
             {details.properties.mag}
           </div>
+        </div>
+        <div className='row'>
           <div className='category'>
             Time
             </div>
           <div className='details'>
             {details.properties.time}
           </div>
+        </div>
+        <div className='row'>
           <div className='category'>
             Status
             </div>
           <div className='details'>
             {details.properties.status}
           </div>
+        </div>
+        <div className='row'>
           <div className='category'>
             Tsunami
             </div>
           <div className='details'>
             {details.properties.tsunami}
           </div>
+        </div>
+        <div className='row'>
           <div className='category'>
             Type
             </div>
@@ -49,7 +59,7 @@ export default function EarthQuakeDetail() {
             {details.properties.type}
           </div>
         </div>
-      </div>
+      </section>
     </article>
   )
 }
