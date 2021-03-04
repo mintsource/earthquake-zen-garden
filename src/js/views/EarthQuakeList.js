@@ -26,7 +26,6 @@ export default function EarthQuakeList() {
   });
 
   function sortField(name) {
-    console.log("sortField:" + JSON.stringify(name))
 
     setSortAscending(!sortAscending)
 
@@ -54,7 +53,6 @@ export default function EarthQuakeList() {
   }
 
   return (
-
     <article className="container">
       <h1>USGS All Earthquakes, Past Hour</h1>
       <table className="earthquake-list">

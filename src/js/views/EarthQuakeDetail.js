@@ -2,7 +2,6 @@ import React from 'react';
 import { useParams } from "react-router-dom";
 import earthQuakeData from '../../data/earthquakes.json'
 
-
 export default function EarthQuakeDetail() {
   const { id } = useParams()
   const details = earthQuakeData.data.features.find(earthquake => earthquake.id === id)
