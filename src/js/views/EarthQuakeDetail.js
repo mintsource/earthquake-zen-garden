@@ -6,9 +6,6 @@ import earthQuakeData from '../../data/earthquakes.json'
 export default function EarthQuakeDetail() {
   const { id } = useParams()
   const details = earthQuakeData.data.features.find(earthquake => earthquake.id === id)
-
-  console.log('details:' + JSON.stringify(details))
-
   const fields = [
     { label: "Title", value: "title" },
     { label: "Magnititude", value: "mag" },

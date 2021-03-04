@@ -8,8 +8,6 @@ export default function EarthQuakeList() {
   const [sortAscending, setSortAscending] = useState()
   const [sortedData, setSortedData] = useState(earthQuakeData.data.features)
 
-  console.log(`sortedField: ${sortedField}`)
-
   if (sortedField === undefined) {
     sortField("place")
   }
@@ -30,11 +28,7 @@ export default function EarthQuakeList() {
   function sortField(name) {
     console.log("sortField:" + JSON.stringify(name))
 
-    if (name === sortedField) {
-      setSortAscending(!sortAscending)
-    } else {
-      setSortAscending(true)
-    }
+    setSortAscending(!sortAscending)
 
     sortedData.sort((a, b) => {
       if (a.properties[name] < b.properties[name]) {
