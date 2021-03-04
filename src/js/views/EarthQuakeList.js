@@ -50,6 +50,15 @@ export default function EarthQuakeList() {
     setSortedData(sortedData)
   }
 
+  function sortIndicator(fieldName) {
+    if (sortedField === fieldName) {
+      if (sortAscending) {
+        return "asc"
+      }
+      return "desc"
+    }
+  }
+
   return (
 
     <article className="container">
@@ -57,9 +66,9 @@ export default function EarthQuakeList() {
       <table className="earthquake-list">
         <thead>
           <tr>
-            <th onClick={() => sortField('place')} className={sortedField === 'place' ? 'sorted' : null}>Title</th>
-            <th onClick={() => sortField('mag')} className={sortedField === 'mag' ? 'sorted' : null}>Magnitude</th>
-            <th onClick={() => sortField('time')} className={sortedField === 'time' ? 'sorted' : null}>Time</th>
+            <th onClick={() => sortField('place')} className={sortIndicator('place')}>Title</th>
+            <th onClick={() => sortField('mag')} className={sortIndicator('mag')}>Magnitude</th>
+            <th onClick={() => sortField('time')} className={sortIndicator('time')}>Time</th>
           </tr>
         </thead>
         <tbody>
