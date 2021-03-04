@@ -3,9 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --mode development --open --hot --port 3000",
-    "build": "webpack --mode production"
+    "start": "webpack serve --mode development --open --hot --port 3000"
   },
   "author": "Dan Roden",
   "dependencies": {
