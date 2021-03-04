@@ -7,58 +7,41 @@ export default function EarthQuakeDetail() {
   const { id } = useParams()
   const details = earthQuakeData.data.features.find(earthquake => earthquake.id === id)
 
+  console.log('details:' + JSON.stringify(details))
+
+  const fields = [
+    { label: "Title", value: "title" },
+    { label: "Magnititude", value: "mag" },
+    { label: "Time", value: "time" },
+    { label: "Status", value: "status" },
+    { label: "Tsunami", value: "tsunami" },
+    { label: "Type", value: "type" }
+  ]
+
+  const detailTemplate = []
+
+  fields.map(field => {
+    if (field.value === "time"){
+      details.properties[field.value] = new Date(details.properties[field.value]).toUTCString()
+    }
+
+    detailTemplate.push(
+      <div className='row' key={field.value}>
+        <div className='entry title'>
+          {field.label}
+        </div>
+        <div className='entry value'>
+          {details.properties[field.value]}
+        </div>
+      </div>
+    )
+  });
+
   return (
     <article className='detail-container'>
       <h1>{details.properties.place}</h1>
       <section>
-        <div className='row'>
-          <div className='category'>
-            Title
-            </div>
-          <div className='details'>
-            {details.properties.place}
-          </div>
-        </div>
-        <div className='row'>
-          <div className='category'>
-            Magnititude
-            </div>
-          <div className='details'>
-            {details.properties.mag}
-          </div>
-        </div>
-        <div className='row'>
-          <div className='category'>
-            Time
-            </div>
-          <div className='details'>
-            {details.properties.time}
-          </div>
-        </div>
-        <div className='row'>
-          <div className='category'>
-            Status
-            </div>
-          <div className='details'>
-            {details.properties.status}
-          </div>
-        </div>
-        <div className='row'>
-          <div className='category'>
-            Tsunami
-            </div>
-          <div className='details'>
-            {details.properties.tsunami}
-          </div>
-        </div>
-        <div className='row'>
-          <div className='category'>
-            Type
-            </div>
-          <div className='details'>
-            {details.properties.type}
-          </div>
-        </div>
+        {detailTemplate}
       </section>
     </article>
   )
