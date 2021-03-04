@@ -21,7 +21,7 @@ function App() {
           <Route path="/detail/:id">
             <EarthQuakeDetail />
           </Route>
-          <Route path="/profile/:id">
+          <Route path="/profile">
             <Profile />
           </Route>
         </Switch>
