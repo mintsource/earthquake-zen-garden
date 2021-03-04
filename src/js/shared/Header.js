@@ -14,7 +14,7 @@ export default function Header() {
       <div className="title">{earthQuakeData.site.title}</div>
       <div className="menu">
         <Link to={"/profile"}>
-          Welcome Sally
+          Welcome {earthQuakeData.profile.firstName}
         </Link>
       </div>
     </header>)
