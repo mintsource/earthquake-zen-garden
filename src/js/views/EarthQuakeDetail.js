@@ -21,7 +21,7 @@ export default function EarthQuakeDetail() {
   const detailTemplate = []
 
   fields.map(field => {
-    if (field.value === "time"){
+    if (field.value === "time") {
       details.properties[field.value] = new Date(details.properties[field.value]).toUTCString()
     }
 
