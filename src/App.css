@@ -58,3 +58,21 @@ a {
   width: 50%;
   background-color: var(--pallette-lightist-tone)x;
 }
+
+.earthquake-list {
+  border-collapse:collapse;
+}
+
+.earthquake-list tr th {
+  background-color: var(--pallette-theme-standout-secondary);
+  color: var(--pallette-lightist-tone);
+  padding: 1rem;
+  text-align: center;
+}
+
+.earthquake-list tr td {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+
