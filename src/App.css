@@ -86,10 +86,6 @@ a {
   width: 10rem;
 }
 
-.avatar img {
-  width: 10rem;
-}
-
 .earthquake-list {
   border-collapse: collapse;
 }
@@ -115,7 +111,6 @@ a {
 
 .earthquake-list .desc:after {
   content: ' \25BC';
-
 }
 
 .earthquake-list tr td {
