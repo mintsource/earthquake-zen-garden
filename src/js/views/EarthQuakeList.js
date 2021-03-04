@@ -22,7 +22,7 @@ export default function EarthQuakeList() {
             {earthquake.properties.place}</Link>
         </td>
         <td data-label="Magnitude">{earthquake.properties.mag}</td>
-        <td data-label="Time">{earthquake.properties.time}</td>
+        <td data-label="Time">{new Date(earthquake.properties.time).toUTCString()}</td>
       </tr>
     )
   });
