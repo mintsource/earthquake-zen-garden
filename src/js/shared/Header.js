@@ -19,6 +19,3 @@ export default function Header() {
       </div>
     </header>)
 }
-
-
-/* TODO styled components header layout */
