@@ -38,7 +38,7 @@ export default function EarthQuakeDetail() {
   });
 
   return (
-    <article className='detail-container'>
+    <article className='container'>
       <h1>{details.properties.place}</h1>
       <section>
         {detailTemplate}

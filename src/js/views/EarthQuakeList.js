@@ -10,7 +10,7 @@ export default function EarthQuakeList() {
 
   console.log(`sortedField: ${sortedField}`)
 
-  if(sortedField === undefined) {
+  if (sortedField === undefined) {
     sortField("place")
   }
 
@@ -30,7 +30,7 @@ export default function EarthQuakeList() {
   function sortField(name) {
     console.log("sortField:" + JSON.stringify(name))
 
-    if(name === sortedField) {
+    if (name === sortedField) {
       setSortAscending(!sortAscending)
     } else {
       setSortAscending(true)
@@ -50,18 +50,21 @@ export default function EarthQuakeList() {
     setSortedData(sortedData)
   }
 
-  return (<>
-    <table className="earthquake-list">
-      <thead>
-        <tr>
-          <th onClick={() => sortField('place')} className={sortedField === 'place' ? 'sorted' : null}>Title</th>
-          <th onClick={() => sortField('mag')} className={sortedField === 'mag' ? 'sorted' : null}>Magnitude</th>
-          <th onClick={() => sortField('time')} className={sortedField === 'time' ? 'sorted' : null}>Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        {tableData}
-      </tbody>
-    </table>
-  </>)
+  return (
+
+    <article className="container">
+      <h1>USGS All Earthquakes, Past Hour</h1>
+      <table className="earthquake-list">
+        <thead>
+          <tr>
+            <th onClick={() => sortField('place')} className={sortedField === 'place' ? 'sorted' : null}>Title</th>
+            <th onClick={() => sortField('mag')} className={sortedField === 'mag' ? 'sorted' : null}>Magnitude</th>
+            <th onClick={() => sortField('time')} className={sortedField === 'time' ? 'sorted' : null}>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableData}
+        </tbody>
+      </table>
+    </article>)
 }

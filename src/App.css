@@ -12,21 +12,22 @@ body {
 }
 
 header {
+  align-items: center;
   background-color: var(--pallette-lightist-tone);
   display: flex;
   flex-direction: row;
-  padding: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 header .logo img {
-  width: 25%;
+  width: 100px;
 }
 
 header .title {
   color: var(---pallette-darkier-tone);
   font-size: 2rem;
   font-weight: bold;
-  width: 60%;
 }
 
 h1 {
@@ -38,9 +39,29 @@ a {
   font-weight: bold;
 }
 
+.container {
+  margin: auto;
+  max-width: 40rem;
+}
+
 .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 0
+}
+
+.double-column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 2
 }
 
 .entry {
@@ -51,7 +72,7 @@ a {
   background-color: var(--pallette-darkier-tone);
   color: var(--pallette-lightist-tone);
   font-weight: bold;
-  width: 10%;
+  width: 100px;
 }
 
 .entry.value {
@@ -59,13 +80,22 @@ a {
   background-color: var(--pallette-lightist-tone)x;
 }
 
+.avatar {
+  width: 10rem;
+}
+
+.avatar img {
+  width: 10rem;
+}
+
 .earthquake-list {
-  border-collapse:collapse;
+  border-collapse: collapse;
 }
 
 .earthquake-list tr th {
   background-color: var(--pallette-theme-standout-secondary);
   color: var(--pallette-lightist-tone);
+  cursor: pointer;
   padding: 1rem;
   text-align: center;
 }
@@ -78,5 +108,3 @@ a {
 .earthquake-list .primary {
   text-align: left;
 }
-
-
