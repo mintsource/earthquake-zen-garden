@@ -1,10 +1,8 @@
 import React from 'react'
-import { useParams } from "react-router-dom";
 import earthQuakeData from '../../data/earthquakes.json'
 
 export default function Profile() {
 
-  const { id } = useParams()
   const profile = earthQuakeData.profile
 
   const fields = [
