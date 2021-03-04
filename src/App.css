@@ -19,7 +19,7 @@ header {
 }
 
 header .logo img {
-  width: 20%;
+  width: 25%;
 }
 
 header .title {
@@ -31,6 +31,11 @@ header .title {
 
 h1 {
   text-align: center;
+}
+
+a {
+  color: var(--pallette-theme-standout-secondary);
+  font-weight: bold;
 }
 
 .row {
@@ -51,5 +56,5 @@ h1 {
 
 .entry.value {
   width: 50%;
-  background-color: #ededed;
+  background-color: var(--pallette-lightist-tone)x;
 }
