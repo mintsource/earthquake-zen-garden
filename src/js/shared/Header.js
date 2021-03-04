@@ -6,17 +6,17 @@ export default function Header() {
 
   return (
     <header>
-      <div className="logo">
-        <Link to={`/`}>
-          <img src={earthQuakeData.site.logoImage} alt={earthQuakeData.site.title} />
+        <div className="logo">
+          <Link to={`/`}>
+            <img src={earthQuakeData.site.logoImage} alt={earthQuakeData.site.title} />
+          </Link>
+        </div>
+        <div className="title">{earthQuakeData.site.title}</div>
+        <div className="menu">
+          <Link to={"/profile"}>
+            Welcome Sally
         </Link>
-      </div>
-      <div className="title">{earthQuakeData.site.title}</div>
-      <div className="menu">
-        <Link to={`/profile/${earthQuakeData.data.firstName}`}>
-          Welcome Sally
-        </Link>
-      </div>
+        </div>
     </header>)
 }
 
