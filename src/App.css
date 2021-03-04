@@ -104,16 +104,16 @@ a {
   text-align: center;
 }
 
-.earthquake-list tr th:before {
+.earthquake-list tr th:after {
   font-size: 0.6rem;
   padding-right: 0.5rem;
 }
 
-.earthquake-list .asc:before {
+.earthquake-list .asc:after {
   content: ' \25B2';
 }
 
-.earthquake-list .desc:before {
+.earthquake-list .desc:after {
   content: ' \25BC';
 
 }
